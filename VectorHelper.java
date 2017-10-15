@@ -5,7 +5,7 @@ import java.util.List;
 
 public class VectorHelper {
 
-    int vector[] ;
+    public int vector[] ;
 
 
 
@@ -17,6 +17,33 @@ public class VectorHelper {
             vector[i] = vect[i];
         }
 
+    }
+
+
+    public void sort(){
+            boolean sorted = false, permut = false;
+            int i=0;
+        while (!sorted)
+        {
+            permut = false;
+            for ( i=0; i<vector.length ; i++){
+
+                if (i+1 < vector.length){
+                    if (vector[i]>vector[i+1]){
+                        int tmp = vector[i];
+                        vector[i] = vector[i+1];
+                        vector[i+1] = tmp;
+                        permut = true;
+
+                    }
+                }
+
+
+            }
+            if (!permut)
+                sorted = true;
+
+        }
 
     }
 
