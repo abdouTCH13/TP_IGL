@@ -47,5 +47,14 @@ public class VectorHelper {
 
     }
 
+    public void add(VectorHelper vect) throws  Exception{
+        if (vect.vector.length != this.vector.length)
+            throw new Exception();
+
+        for (int i =0; i<this.vector.length; i++){
+            this.vector[i] += vect.vector[i];
+        }
+    }
+
 
 }
